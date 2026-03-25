@@ -43,12 +43,13 @@
 /* ════════════════════════════════════════
    NAV FLOTANTE
 ════════════════════════════════════════ */
-var nav   = document.getElementById('nav');
-var links = nav.querySelectorAll('a');
-var ids   = ['hero', 'video', 'nosotros', 'productos', 'galeria', 'packs', 'contacto'];
-var secs  = ids.map(function (id) { return document.getElementById(id); });
+var nav = document.getElementById('nav');
+var links = nav ? nav.querySelectorAll('a') : [];
+var ids = ['hero', 'nosotros', 'productos', 'packs', 'contacto'];
+var secs = ids.map(function (id) { return document.getElementById(id); });
 
 window.addEventListener('scroll', function () {
+  if (!nav) return;
   var sy = window.scrollY;
   nav.classList.toggle('show', sy > 300);
   var cur = 0;
@@ -67,31 +68,39 @@ links.forEach(function (a) {
 /* ════════════════════════════════════════
    FORMULARIO → WHATSAPP
 ════════════════════════════════════════ */
-document.getElementById('ctForm').addEventListener('submit', function (e) {
+var ctForm = document.getElementById('ctForm');
+if (ctForm) ctForm.addEventListener('submit', function (e) {
   e.preventDefault();
   var f   = e.target;
-  var nombre = f[0].value.trim();
-  var email = f[1].value.trim();
-  var telefono = f[2].value.trim();
-  var mensaje = f[3].value.trim();
+  var nombre = (f.elements['nombre'] && f.elements['nombre'].value || '').trim();
+  var email = (f.elements['email'] && f.elements['email'].value || '').trim();
+  var telefono = (f.elements['telefono'] && f.elements['telefono'].value || '').trim();
+  var mensaje = (f.elements['mensaje'] && f.elements['mensaje'].value || '').trim();
   var status = document.getElementById('formStatus');
 
   // Validación básica
-  if (!nombre || !mensaje) {
-    status.textContent = 'Por favor completa Nombre y Mensaje';
+  if (!nombre || !email || !telefono || !mensaje) {
+    status.textContent = 'Por favor completa todos los campos.';
+    status.className = 'ct-form-status error';
+    status.style.display = 'block';
+    return;
+  }
+  var emailOk = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email);
+  if (!emailOk) {
+    status.textContent = 'Por favor ingresá un email válido.';
     status.className = 'ct-form-status error';
     status.style.display = 'block';
     return;
   }
 
   // Construir texto para WhatsApp
-  var texto = 'Hola! Soy ' + nombre + '.%0A%0A' +
-              'Mensaje: ' + mensaje + '%0A%0A';
-  if (email) texto += 'Email: ' + email + '%0A';
-  if (telefono) texto += 'Teléfono: ' + telefono + '%0A';
+  var texto = 'Hola! Soy ' + nombre + '.\n\n' +
+              'Mensaje: ' + mensaje + '\n\n';
+  if (email) texto += 'Email: ' + email + '\n';
+  if (telefono) texto += 'Teléfono: ' + telefono + '\n';
 
   // Redirigir a WhatsApp
-  var url = 'https://wa.me/5493547590813?text=' + encodeURIComponent(decodeURIComponent(texto));
+  var url = 'https://wa.me/5493547590813?text=' + encodeURIComponent(texto);
   window.open(url, '_blank');
 
   // Mostrar confirmación
