@@ -1,0 +1,27 @@
+{
+  "name": "baraka-project",
+  "version": "1.0.0",
+  "description": "Landing page para BARAKA, negocio de cocina árabe artesanal en Alta Gracia, Córdoba.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Coco-Developer/Baraka-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Coco-Developer/Baraka-Project/issues"
+  },
+  "homepage": "https://github.com/Coco-Developer/Baraka-Project#readme",
+  "dependencies": {
+    "jsdom": "^21.1.2"
+  }
+}

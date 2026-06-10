@@ -78,7 +78,7 @@
     <div>
       <p class="ns-lead"><em>Baraka</em> significa <em>bendición</em> en árabe. Es el nombre que elegimos para lo que hacemos.</p>
       <p class="ns-p">Somos una familia de <strong>Alta Gracia, Córdoba</strong>, con raíces en la cocina del Medio Oriente. Preparamos cada producto de forma artesanal, con ingredientes frescos y recetas que no tienen atajos.</p>
-      <p class="ns-p">Sin conservantes. Sin freezer. Cada pedido se prepara el mismo día, con el tiempo y el cuidado que la comida de verdad merece.</p>
+      <p class="ns-p">Sin conservantes. Cada pedido se prepara el mismo día, con el tiempo y el cuidado que la comida de verdad merece.</p>
       <div class="ns-quote">
         <p>"Cocinamos con las mismas recetas de siempre, porque creemos que lo auténtico no necesita mejoras."</p>
         <cite>— Baraka, Alta Gracia</cite>
@@ -340,9 +340,9 @@
   <div class="packs-grid">
 
     <!-- Pack Para Dos -->
-    <div class="pack-card">
+    <div class="pack-card" data-pack-name="Pack Para Dos" data-pack-price="$18.000">
       <div class="pack-hdr">
-        <div class="pack-hdr-icon">🫒</div>
+        <div class="pack-hdr-icon"><i class="fas fa-plate-wheat"></i></div>
         <div class="pack-size">Pack íntimo</div>
         <div class="pack-name">Para Dos</div>
         <div class="pack-ar">للاثنين</div>
@@ -367,20 +367,20 @@
       <div class="pack-foot">
         <div class="price-box">
           <div class="price-lbl">Precio</div>
-          <div class="price-val">$15.000</div>
+          <div class="price-val">$18.000</div>
           <div class="price-note">Para 2-3 personas</div>
         </div>
         <div class="pack-contact">
           <div class="contact-lbl">Pedidos por</div>
-          <div class="contact-val">WhatsApp</div>
+          <a href="https://wa.me/5493547590813" class="contact-val pack-order-link" target="_blank" rel="noopener noreferrer">WhatsApp</a>
         </div>
       </div>
     </div>
 
     <!-- Pack La Familia -->
-    <div class="pack-card">
+    <div class="pack-card" data-pack-name="Pack La Familia" data-pack-price="$32.000">
       <div class="pack-hdr prem">
-        <div class="pack-hdr-icon">🍽️</div>
+        <div class="pack-hdr-icon"><i class="fas fa-users"></i></div>
         <div class="pack-size">Pack familiar</div>
         <div class="pack-name">La Familia</div>
         <div class="pack-ar">العائلة</div>
@@ -405,20 +405,20 @@
       <div class="pack-foot">
         <div class="price-box">
           <div class="price-lbl">Precio</div>
-          <div class="price-val">$28.000</div>
+          <div class="price-val">$32.000</div>
           <div class="price-note">Para 4–6 personas</div>
         </div>
         <div class="pack-contact">
           <div class="contact-lbl">Pedidos por</div>
-          <div class="contact-val">WhatsApp</div>
+          <a href="https://wa.me/5493547590813" class="contact-val pack-order-link" target="_blank" rel="noopener noreferrer">WhatsApp</a>
         </div>
       </div>
     </div>
 
     <!-- Pack Docena de Empanadas -->
-    <div class="pack-card">
+    <div class="pack-card" data-pack-name="Docena de Empanadas Árabes" data-pack-price="$20.000">
       <div class="pack-hdr">
-        <div class="pack-hdr-icon">🥟</div>
+        <div class="pack-hdr-icon"><i class="fas fa-box-open"></i></div>
         <div class="pack-size">Pack especial</div>
         <div class="pack-name">Empanadas Árabes</div>
         <div class="pack-ar">سمبوسة</div>
@@ -438,47 +438,86 @@
       <div class="pack-foot">
         <div class="price-box">
           <div class="price-lbl">Precio</div>
-          <div class="price-val">$18.000</div>
+          <div class="price-val">$20.000</div>
           <div class="price-note">Para compartir</div>
         </div>
         <div class="pack-contact">
           <div class="contact-lbl">Pedidos por</div>
-          <div class="contact-val">WhatsApp</div>
+          <a href="https://wa.me/5493547590813" class="contact-val pack-order-link" target="_blank" rel="noopener noreferrer">WhatsApp</a>
         </div>
       </div>
     </div>
 
-    <!-- Pack Próximamente -->
-    <div class="pack-card coming-soon">
-      <div class="pack-hdr">
-        <div class="pack-hdr-icon">🔮</div>
-        <div class="pack-size">Próximamente</div>
+    <!-- Pack Personalizado (trigger para modal) -->
+    <div class="pack-card custom-pack-card">
+      <div class="pack-hdr custom-pack-hdr">
+        <div class="pack-hdr-icon"><i class="fas fa-cart-plus"></i></div>
+        <div class="pack-size">Pack personalizado</div>
         <div class="pack-name">Armá tu Picada</div>
-        <div class="pack-ar">قريباً</div>
+        <div class="pack-ar">حسب الطلب</div>
       </div>
-      <div class="pack-body">
-        <div class="pack-section-label">Personaliza</div>
-        <ul class="pack-items">
-          <li><span class="item-name">Elige tus productos favoritos</span></li>
-          <li><span class="item-name">Cantidades a tu medida</span></li>
-          <li><span class="item-name">Armá la picada perfecta</span></li>
-        </ul>
-      </div>
-      <div class="pack-foot">
-        <div class="price-box">
-          <div class="price-lbl">Estado</div>
-          <div class="price-val">Próximamente</div>
-          <div class="price-note">¡Estate atento!</div>
+      <div class="pack-body custom-pack-body">
+        <div class="custom-pack-intro">
+          Elegí tus productos, armá el pack y enviá el pedido por WhatsApp en un solo paso.
         </div>
-        <div class="pack-contact">
-          <div class="contact-lbl">Info por</div>
-          <div class="contact-val">WhatsApp</div>
+        <div style="display:flex; gap:12px; align-items:center; margin-top:12px">
+          <button type="button" class="btn btn-gold custom-pack-open">Armá tu Picada</button>
+          <button type="button" class="btn btn-outline" id="customPackPreview">Ver resumen</button>
         </div>
       </div>
     </div>
 
   </div>
 </section>
+
+<!-- Modal: Armá tu Picada -->
+<div id="customPackModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="customPackTitle">
+  <div class="modal-overlay" data-action="close"></div>
+  <div class="modal-content" role="document">
+    <button type="button" class="modal-close" aria-label="Cerrar" data-action="close">×</button>
+    <div class="pack-card custom-pack-card" id="customPackBuilder">
+      <div class="pack-hdr custom-pack-hdr">
+        <div class="pack-hdr-icon"><i class="fas fa-cart-plus"></i></div>
+        <div class="pack-size">Pack personalizado</div>
+        <div class="pack-name" id="customPackTitle">Armá tu Picada</div>
+        <div class="pack-ar">حسب الطلب</div>
+      </div>
+      <div class="pack-body custom-pack-body">
+        <div class="custom-pack-intro">
+          Elegí tus productos, armá el pack y enviá el pedido por WhatsApp en un solo paso.
+        </div>
+
+        <div class="custom-pack-grid" id="customPackGrid"></div>
+
+        <div class="custom-pack-summary">
+          <div class="custom-pack-summary-main">
+            <div class="price-lbl">Total del pack</div>
+            <div class="custom-total" id="customPackTotal">$0</div>
+            <div class="price-note" id="customPackMeta">Seleccioná productos para armar tu pedido.</div>
+          </div>
+          <div class="custom-pack-summary-list" id="customPackSummaryList">
+            <div class="custom-pack-summary-empty">Todavía no agregaste productos.</div>
+          </div>
+          <div class="custom-pack-actions">
+            <button type="button" class="btn btn-outline custom-pack-clear" id="customPackClear">Limpiar</button>
+            <a href="https://wa.me/5493547590813" class="btn btn-gold custom-pack-order disabled" id="customPackOrder" target="_blank" rel="noopener noreferrer" aria-disabled="true">
+              Encargar por WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button type="button" class="floating-pack-summary" id="floatingPackSummary" aria-label="Ver resumen del pack">
+  <span class="floating-pack-icon"><i class="fas fa-cart-shopping"></i></span>
+  <span class="floating-pack-copy">
+    <span class="floating-pack-title">Tu pack</span>
+    <span class="floating-pack-total" id="floatingPackTotal">$0</span>
+  </span>
+  <span class="floating-pack-count" id="floatingPackCount">0</span>
+</button>
 
 <div class="divider"></div>
 
@@ -567,6 +606,7 @@
   </div>
 </footer>
 
+<script src="js/pack-config.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
